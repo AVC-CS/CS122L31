@@ -1,9 +1,11 @@
+import pytest
 import main
 import io
 import sys
 import re
 
 
+@pytest.mark.basic
 def test_main_1():
     captureOut = io.StringIO()
     sys.stdout = captureOut
@@ -22,6 +24,7 @@ def test_main_1():
     assert ret == 1, 'Range 1'
 
 
+@pytest.mark.bonus
 def test_main_2():
     captureOut = io.StringIO()
     sys.stdout = captureOut
@@ -40,6 +43,7 @@ def test_main_2():
     assert ret == 3, 'Range 3'
 
 
+@pytest.mark.bonus
 def test_main_3():
     captureOut = io.StringIO()
     sys.stdout = captureOut
