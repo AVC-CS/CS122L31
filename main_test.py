@@ -24,7 +24,7 @@ def test_main_1():
     assert ret == 1, 'Range 1'
 
 
-@pytest.mark.bonus
+@pytest.mark.edge
 def test_main_2():
     captureOut = io.StringIO()
     sys.stdout = captureOut
